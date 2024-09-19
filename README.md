@@ -1,5 +1,14 @@
 # JAVA CUCUMBER DEMO
 
+## Java Versions
+
+> See the branch selector to get more details
+
+- Java 8
+- Java 11
+- Java 17
+- Java 21
+
 ## Installation
 
 ###### Plugin
