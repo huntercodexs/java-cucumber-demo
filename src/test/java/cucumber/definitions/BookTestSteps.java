@@ -1,4 +1,4 @@
-package com.huntercodexs.defs;
+package cucumber.definitions;
 
 import com.huntercodexs.cucumberdemo.BookService;
 import io.cucumber.java.en.Given;
@@ -6,7 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class BookDefinitions {
+public class BookTestSteps {
 
     private boolean result;
     private BookService bookService;

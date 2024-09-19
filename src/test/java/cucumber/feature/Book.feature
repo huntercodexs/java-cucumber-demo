@@ -2,6 +2,7 @@
 
   Feature: Book search in the virtual library
 
+    @BookTest
     Scenario: Book Research by title
       Given My library is initialized
       When Making a research the book name "Java Spring Boot"
