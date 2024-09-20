@@ -19,20 +19,22 @@
 
 <code>
 
+        <!--Selenium-->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.22.0</version>
+            <scope>test</scope>
+        </dependency>
+
         <!--Junit-Tests-->
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.8.2</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-junit-jupiter</artifactId>
-            <version>4.5.1</version>
-            <scope>test</scope>
-        </dependency>
-        
+
         <!--Java-Cucumber-->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -40,7 +42,7 @@
             <version>7.18.1</version>
             <scope>test</scope>
         </dependency>
-        
+
         <!--Cucumber-Junit-->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -56,10 +58,24 @@
 <pre>
 # language: en
 
-  Feature: Book search in the virtual library
+  Feature: User login test
+    Perform user login on Practice Test Automation website
 
-    Scenario: Book Research by title
-      Given My library is initialized
-      When I make research the book name "Java Spring Boot"
-      Then The book is found successfully
+    @LoginTest
+    Scenario: Success login
+      Given user is on login page
+      When user login with "student" and "Password123"
+      Then login successfully
+</pre>
+
+###### Target tests - Website (Login)
+
+https://practicetestautomation.com/practice-test-login/
+
+###### Requirements
+
+<pre>
+sudo apt-get install chromium-chromedriver
+whereis chromedriver
+chromedriver: /usr/bin/chromedriver
 </pre>
